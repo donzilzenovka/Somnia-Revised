@@ -1,0 +1,42 @@
+[23:26:33] [main/INFO]: Setting user: Developer
+[23:26:33] [Client thread/INFO]: LWJGL Version: 2.9.4
+[23:26:39] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Somnia
+[23:26:40] [Client thread/INFO]: Created: 16x16 textures/blocks-atlas
+[23:26:40] [Client thread/INFO]: Created: 16x16 textures/items-atlas
+[23:26:40] [Sound Library Loader/INFO]: Sound engine started
+[23:26:40] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Somnia
+[23:26:40] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[23:26:40] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[23:26:41] [Sound Library Loader/INFO]: Sound engine started
+[23:26:43] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
+[23:26:43] [Server thread/INFO]: Generating keypair
+[23:26:43] [Server thread/INFO]: Preparing start region for level 0
+[23:26:44] [Server thread/INFO]: Changing view distance to 12, from 10
+[23:26:44] [Server thread/INFO]: Developer[local:E:6ed04669] logged in with entity id 320 at (-32.5, 76.0, 250.5)
+[23:26:44] [Server thread/INFO]: Developer joined the game
+[23:26:44] [Server thread/INFO]: Saving and pausing game...
+[23:26:44] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[23:26:44] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[23:26:44] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[23:26:50] [Server thread/INFO]: Saving and pausing game...
+[23:26:50] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[23:26:50] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[23:26:50] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[23:26:50] [Server thread/INFO]: Stopping server
+[23:26:50] [Server thread/INFO]: Saving players
+[23:26:50] [Server thread/INFO]: Saving worlds
+[23:26:50] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[23:26:50] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[23:26:50] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[23:26:50] [Server thread/ERROR]: Exception stopping the server
+java.lang.UnsupportedOperationException
+	at java.util.concurrent.CopyOnWriteArrayList$COWIterator.remove(CopyOnWriteArrayList.java:1182) ~[?:1.8.0_432]
+	at com.kingrunes.somnia.common.CommonProxy.worldUnloadHook(CommonProxy.java:133) ~[CommonProxy.class:?]
+	at cpw.mods.fml.common.eventhandler.ASMEventHandler_9_CommonProxy_worldUnloadHook_Unload.invoke(.dynamic) ~[?:?]
+	at cpw.mods.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:54) ~[ASMEventHandler.class:?]
+	at cpw.mods.fml.common.eventhandler.EventBus.post(EventBus.java:140) ~[EventBus.class:?]
+	at net.minecraft.server.MinecraftServer.stopServer(MinecraftServer.java:410) ~[MinecraftServer.class:?]
+	at net.minecraft.server.integrated.IntegratedServer.stopServer(IntegratedServer.java:266) ~[IntegratedServer.class:?]
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:538) [MinecraftServer.class:?]
+	at net.minecraft.server.MinecraftServer$2.run(MinecraftServer.java:752) [MinecraftServer$2.class:?]
+[23:26:51] [Client thread/INFO]: Stopping!
