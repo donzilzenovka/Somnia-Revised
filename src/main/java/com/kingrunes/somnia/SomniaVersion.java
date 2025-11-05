@@ -11,7 +11,7 @@ public final class SomniaVersion {
     // === Version constants ===
     public static final int MAJOR_VERSION = 1;
     public static final int MINOR_VERSION = 3;
-    public static final int REVISION_VERSION = 0;
+    public static final int REVISION_VERSION = 1;
     public static final int BUILD = 15;
 
     // Core versioning (mirrors main version for now)

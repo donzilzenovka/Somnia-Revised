@@ -3,7 +3,6 @@ package com.kingrunes.somnia.common;
 import java.io.DataInputStream;
 import java.io.File;
 import java.io.IOException;
-import java.util.Iterator;
 import java.util.List;
 
 import net.minecraft.entity.monster.EntityMob;
@@ -142,15 +141,19 @@ public class CommonProxy {
 
     @SubscribeEvent
     public void worldUnloadHook(WorldEvent.Unload event) {
-        if (event.world instanceof WorldServer worldServer) {
-            Iterator<ServerTickHandler> iter = Somnia.instance.tickHandlers.iterator();
-            while (iter.hasNext()) {
-                ServerTickHandler handler = iter.next();
+        if (event.world instanceof WorldServer) {
+            WorldServer worldServer = (WorldServer) event.world;
+
+            boolean removed = Somnia.instance.tickHandlers.removeIf(handler -> {
                 if (handler.worldServer == worldServer) {
                     System.out.println("[Somnia] Removing tick handler for unloading world!");
-                    iter.remove();
-                    break;
+                    return true; // remove this handler
                 }
+                return false; // keep
+            });
+
+            if (!removed) {
+                System.out.println("[Somnia] No tick handler found to remove for this world.");
             }
         }
     }
