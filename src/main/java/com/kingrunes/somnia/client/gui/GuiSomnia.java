@@ -40,7 +40,7 @@ public class GuiSomnia extends GuiSleepMP {
     private static final RenderItem presetIconRenderer = new RenderItem();
     private static final ItemStack clockItemStack = new ItemStack(Item.getItemById(347));
 
-    public String status = "Waiting...";
+    public String status = "Sleeping...";
     public double speed = 0.0D;
     public int sleeping = 0, awake = 0;
 

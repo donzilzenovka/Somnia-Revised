@@ -1,5 +1,6 @@
 package com.kingrunes.somnia.client;
 
+import com.kingrunes.somnia.common.CommonProxy;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.audio.SoundCategory;
 
@@ -7,6 +8,8 @@ import com.kingrunes.somnia.Somnia;
 
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.TickEvent;
+
+import static com.kingrunes.somnia.Somnia.proxy;
 
 /**
  * Handles client-side ticking for Somnia, including:
@@ -36,7 +39,7 @@ public class ClientTickHandler {
         }
 
         // Determine target volume for sleeping
-        if (Somnia.proxy.muteSoundWhenSleeping && sleeping) {
+        if (proxy.muteSoundWhenSleeping && sleeping) {
             if (targetVolume < 0.0F) {
                 // first tick of sleep, capture current user volume
                 if (userMasterVolume < 0.0F) {
@@ -58,7 +61,7 @@ public class ClientTickHandler {
         }
 
         // Smooth audio fade
-        if (Somnia.proxy.muteSoundWhenSleeping && targetVolume >= 0.0F) {
+        if (proxy.muteSoundWhenSleeping && targetVolume >= 0.0F) {
             float currentVolume = mc.gameSettings.getSoundLevel(SoundCategory.MASTER);
             float volumeDiff = targetVolume - currentVolume;
             float step = FADE_SPEED; // you can tweak for speed of audio fade
@@ -75,8 +78,9 @@ public class ClientTickHandler {
             }
         }
 
-        // Auto wake-up logic
+        // Auto wake-up logic ** disabled no wake up
         if (Somnia.clientAutoWakeTime > -1L && sleeping
+            && proxy.playersWakeNaturally
             && mc.theWorld.getTotalWorldTime() >= Somnia.clientAutoWakeTime) {
 
             Somnia.clientAutoWakeTime = -1L;

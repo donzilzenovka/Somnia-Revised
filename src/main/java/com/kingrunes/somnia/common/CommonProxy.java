@@ -35,6 +35,7 @@ public class CommonProxy {
     // ----------------------------------------
     private static final int CONFIG_VERSION = 1;
 
+    public boolean playersWakeNaturally;
     public TimePeriod enterSleepPeriod;
     public TimePeriod validSleepPeriod;
     public long maxSleepTimePeriod;
@@ -72,6 +73,8 @@ public class CommonProxy {
         config.get("general", "configVersion", CONFIG_VERSION);
 
         // Timing settings
+        this.playersWakeNaturally = config.get("timings", "playersWakeNaturally", true)
+                .getBoolean(true);
         this.enterSleepPeriod = new TimePeriod(
             config.get("timings", "enterSleepStart", 0)
                 .getInt(),
@@ -102,15 +105,15 @@ public class CommonProxy {
             .getBoolean(true);
         this.somniaGui = config.get("options", "somniaGui", true)
             .getBoolean(true);
-        this.muteSoundWhenSleeping = config.get("options", "muteSoundWhenSleeping", false)
+        this.muteSoundWhenSleeping = config.get("options", "muteSoundWhenSleeping", true)
             .getBoolean(false);
-        this.ignoreMonsters = config.get("options", "ignoreMonsters", false)
+        this.ignoreMonsters = config.get("options", "ignoreMonsters", true)
             .getBoolean(false);
 
         // Performance flags
         this.disableCreatureSpawning = config.get("performance", "disableCreatureSpawning", false)
             .getBoolean(false);
-        this.disableRendering = config.get("performance", "disableRendering", false)
+        this.disableRendering = config.get("performance", "disableRendering", true)
             .getBoolean(false);
         this.disableMoodSoundAndLightCheck = config.get("performance", "disableMoodSoundAndLightCheck", false)
             .getBoolean(false);
