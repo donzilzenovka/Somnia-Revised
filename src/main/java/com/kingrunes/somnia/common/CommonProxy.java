@@ -50,6 +50,7 @@ public class CommonProxy {
     public boolean somniaGui;
     public boolean muteSoundWhenSleeping;
     public boolean ignoreMonsters;
+    public boolean enableTirednessSystem;
 
     public boolean disableCreatureSpawning;
     public boolean disableRendering;
@@ -97,6 +98,8 @@ public class CommonProxy {
             .getDouble(100.0D);
 
         // Option flags
+        this.enableTirednessSystem = config.get("options", "enableTirednessSystem", true)
+            .getBoolean(true);
         this.sleepWithArmor = config.get("options", "sleepWithArmor", false)
             .getBoolean(false);
         this.vanillaBugFixes = config.get("options", "vanillaBugFixes", true)

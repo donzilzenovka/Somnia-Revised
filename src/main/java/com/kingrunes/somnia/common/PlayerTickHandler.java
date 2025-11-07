@@ -2,7 +2,6 @@ package com.kingrunes.somnia.common;
 
 import net.minecraft.entity.player.EntityPlayer;
 
-import com.kingrunes.somnia.Somnia;
 import com.kingrunes.somnia.common.util.ClassUtils;
 
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
@@ -36,12 +35,11 @@ public class PlayerTickHandler {
             ClassUtils.setSleeping(player, false);
 
             /*
-            if (Somnia.proxy.fading) {
-                int sleepTimer = player.getSleepTimer() + 1;
-                if (sleepTimer >= 99) sleepTimer = 98;
-                ClassUtils.setSleepTimer(player, sleepTimer);
-            }
-
+             * if (Somnia.proxy.fading) {
+             * int sleepTimer = player.getSleepTimer() + 1;
+             * if (sleepTimer >= 99) sleepTimer = 98;
+             * ClassUtils.setSleepTimer(player, sleepTimer);
+             * }
              */
         }
     }

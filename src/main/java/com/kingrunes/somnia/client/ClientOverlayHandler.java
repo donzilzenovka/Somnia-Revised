@@ -1,14 +1,13 @@
 package com.kingrunes.somnia.client;
 
-import com.kingrunes.somnia.common.CommonProxy;
+import static com.kingrunes.somnia.Somnia.proxy;
+
 import net.minecraft.client.Minecraft;
 import net.minecraftforge.client.event.RenderGameOverlayEvent;
 
 import org.lwjgl.opengl.GL11;
 
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
-
-import static com.kingrunes.somnia.Somnia.proxy;
 
 /**
  * Renders a fullscreen black overlay with alpha based on sleeping progress.
@@ -55,6 +54,5 @@ public class ClientOverlayHandler {
         GL11.glEnable(GL11.GL_DEPTH_TEST);
         GL11.glPopMatrix();
     }
-
 
 }

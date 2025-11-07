@@ -10,6 +10,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.WorldServer;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Configuration;
 
 import org.lwjgl.opengl.GL11;
@@ -20,6 +21,7 @@ import com.kingrunes.somnia.common.util.SomniaState;
 import com.kingrunes.somnia.server.ServerTickHandler;
 import com.kingrunes.somnia.server.SomniaCommand;
 
+import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -54,6 +56,8 @@ public class Somnia {
     public void preInit(FMLPreInitializationEvent event) {
         (event.getModMetadata()).version = VERSION;
         proxy.configure(event.getSuggestedConfigurationFile());
+        // Initialize tiredness network
+        com.kingrunes.somnia.common.tiredness.SomniaTirednessNetwork.init();
     }
 
     @Instance
@@ -72,6 +76,12 @@ public class Somnia {
         channel.register(new PacketHandler());
 
         proxy.register();
+
+        MinecraftForge.EVENT_BUS.register(new com.kingrunes.somnia.common.tiredness.SomniaTirednessHandler());
+        FMLCommonHandler.instance()
+            .bus()
+            .register(new com.kingrunes.somnia.common.tiredness.SomniaTirednessHandler());
+        MinecraftForge.EVENT_BUS.register(new com.kingrunes.somnia.common.SomniaPlayerHandler());
     }
 
     @EventHandler
