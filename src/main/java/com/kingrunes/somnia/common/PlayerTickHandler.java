@@ -35,11 +35,14 @@ public class PlayerTickHandler {
             state.sleepOverride = true;
             ClassUtils.setSleeping(player, false);
 
+            /*
             if (Somnia.proxy.fading) {
                 int sleepTimer = player.getSleepTimer() + 1;
                 if (sleepTimer >= 99) sleepTimer = 98;
                 ClassUtils.setSleepTimer(player, sleepTimer);
             }
+
+             */
         }
     }
 
