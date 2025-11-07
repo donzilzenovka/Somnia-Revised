@@ -32,11 +32,11 @@ public class GuiSelectWakeTime extends GuiScreen {
         this.buttonList.add(
             new GuiButton(
                 i++,
-                this.width * 5 / 8 - buttonWidth / 2,
+                this.width * 6 / 9 - buttonWidth / 2,
                 this.height * 3 / 8 - buttonHeight / 2,
                 buttonWidth,
                 buttonHeight,
-                "Mid Afternoon"));
+                "Afternoon"));
         this.buttonList.add(
             new GuiButton(
                 i++,
@@ -44,15 +44,15 @@ public class GuiSelectWakeTime extends GuiScreen {
                 this.height / 2 - buttonHeight / 2,
                 buttonWidth,
                 buttonHeight,
-                "Before Sunset"));
+                "Dusk"));
         this.buttonList.add(
             new GuiButton(
                 i++,
-                this.width * 5 / 8 - buttonWidth / 2,
+                this.width * 6 / 9 - buttonWidth / 2,
                 this.height * 5 / 8 - buttonHeight / 2,
                 buttonWidth,
                 buttonHeight,
-                "After Sunset"));
+                "Evening"));
         this.buttonList.add(
             new GuiButton(
                 i++,
@@ -64,11 +64,11 @@ public class GuiSelectWakeTime extends GuiScreen {
         this.buttonList.add(
             new GuiButton(
                 i++,
-                this.width * 3 / 8 - buttonWidth / 2,
+                this.width * 3 / 9 - buttonWidth / 2,
                 this.height * 5 / 8 - buttonHeight / 2,
                 buttonWidth,
                 buttonHeight,
-                "Before Sunrise"));
+                "Twilight"));
         this.buttonList.add(
             new GuiButton(
                 i++,
@@ -76,15 +76,15 @@ public class GuiSelectWakeTime extends GuiScreen {
                 this.height / 2 - buttonHeight / 2,
                 buttonWidth,
                 buttonHeight,
-                "After Sunrise"));
+                "Dawn"));
         this.buttonList.add(
             new GuiButton(
                 i++,
-                this.width * 3 / 8 - buttonWidth / 2,
+                this.width * 3 / 9 - buttonWidth / 2,
                 this.height * 3 / 8 - buttonHeight / 2,
                 buttonWidth,
                 buttonHeight,
-                "Mid Morning"));
+                "Morning"));
     }
 
     @Override
@@ -97,25 +97,25 @@ public class GuiSelectWakeTime extends GuiScreen {
                 break; // Noon
             case 1:
                 targetTime = 9000;
-                break; // Mid Afternoon
+                break; // Afternoon
             case 2:
                 targetTime = 12000;
-                break; // Before Sunset
+                break; // Dusk
             case 3:
                 targetTime = 14000;
-                break; // After Sunset
+                break; // Evening
             case 4:
                 targetTime = 18000;
                 break; // Midnight
             case 5:
                 targetTime = 22000;
-                break; // Before Sunrise
+                break; // Twilight
             case 6:
                 targetTime = 0;
-                break; // After Sunrise
+                break; // Dawn
             case 7:
                 targetTime = 3000;
-                break; // Mid Morning
+                break; // Morning
             default:
                 return;
         }
