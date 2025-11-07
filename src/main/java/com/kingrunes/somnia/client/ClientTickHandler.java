@@ -77,9 +77,8 @@ public class ClientTickHandler {
             }
         }
 
-        // Auto wake-up logic ** disabled no wake up
+        // Auto wake-up logic
         if (Somnia.clientAutoWakeTime > -1L && sleeping
-            && proxy.playersWakeNaturally
             && mc.theWorld.getTotalWorldTime() >= Somnia.clientAutoWakeTime) {
 
             Somnia.clientAutoWakeTime = -1L;
