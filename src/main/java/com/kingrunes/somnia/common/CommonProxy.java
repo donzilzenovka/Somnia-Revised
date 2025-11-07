@@ -74,7 +74,7 @@ public class CommonProxy {
 
         // Timing settings
         this.playersWakeNaturally = config.get("timings", "playersWakeNaturally", true)
-                .getBoolean(true);
+            .getBoolean(true);
         this.enterSleepPeriod = new TimePeriod(
             config.get("timings", "enterSleepStart", 0)
                 .getInt(),

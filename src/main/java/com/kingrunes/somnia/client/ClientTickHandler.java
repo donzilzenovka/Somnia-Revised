@@ -1,6 +1,7 @@
 package com.kingrunes.somnia.client;
 
-import com.kingrunes.somnia.common.CommonProxy;
+import static com.kingrunes.somnia.Somnia.proxy;
+
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.audio.SoundCategory;
 
@@ -8,8 +9,6 @@ import com.kingrunes.somnia.Somnia;
 
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.TickEvent;
-
-import static com.kingrunes.somnia.Somnia.proxy;
 
 /**
  * Handles client-side ticking for Somnia, including:

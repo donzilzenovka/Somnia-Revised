@@ -526,3 +526,27 @@
 [23:26:31] [main/INFO] [LaunchWrapper]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
 [23:26:31] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
 [23:26:31] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
+[08:28:56] [main/INFO] [GradleStart]: userProperties: {}
+[08:28:56] [main/INFO] [GradleStart]: assetsDir: C:\Users\User\.gradle\caches\retro_futura_gradle\assets
+[08:28:56] [main/INFO] [GradleStart]: assetIndex: 1.7.10
+[08:28:56] [main/INFO] [GradleStart]: accessToken: 0
+[08:28:56] [main/INFO] [GradleStart]: version: 1.7.10
+[08:28:56] [main/INFO] [GradleStart]: username: Developer
+[08:28:56] [main/INFO] [GradleStart]: Extra: [--gameDir, C:\Users\User\Documents\GitHub\Somnia-Revised\run, --uuid, 31c4910d-9b69-4725-8969-9ed53ac8a7dc]
+[08:28:56] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --assetsDir, C:\Users\User\.gradle\caches\retro_futura_gradle\assets, --assetIndex, 1.7.10, --accessToken, {REDACTED}, --version, 1.7.10, --username, Developer, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --gameDir, C:\Users\User\Documents\GitHub\Somnia-Revised\run, --uuid, 31c4910d-9b69-4725-8969-9ed53ac8a7dc, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[08:28:56] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[08:28:56] [main/INFO] [LaunchWrapper]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[08:28:56] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[08:28:56] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
+[08:37:13] [main/INFO] [GradleStart]: userProperties: {}
+[08:37:13] [main/INFO] [GradleStart]: assetsDir: C:\Users\User\.gradle\caches\retro_futura_gradle\assets
+[08:37:13] [main/INFO] [GradleStart]: assetIndex: 1.7.10
+[08:37:13] [main/INFO] [GradleStart]: accessToken: 0
+[08:37:13] [main/INFO] [GradleStart]: version: 1.7.10
+[08:37:13] [main/INFO] [GradleStart]: username: Developer
+[08:37:13] [main/INFO] [GradleStart]: Extra: [--gameDir, C:\Users\User\Documents\GitHub\Somnia-Revised\run, --uuid, 31c4910d-9b69-4725-8969-9ed53ac8a7dc]
+[08:37:13] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --assetsDir, C:\Users\User\.gradle\caches\retro_futura_gradle\assets, --assetIndex, 1.7.10, --accessToken, {REDACTED}, --version, 1.7.10, --username, Developer, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --gameDir, C:\Users\User\Documents\GitHub\Somnia-Revised\run, --uuid, 31c4910d-9b69-4725-8969-9ed53ac8a7dc, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[08:37:13] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[08:37:13] [main/INFO] [LaunchWrapper]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[08:37:13] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[08:37:13] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker

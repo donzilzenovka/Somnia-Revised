@@ -1,42 +1,109 @@
-[23:26:33] [main/INFO]: Setting user: Developer
-[23:26:33] [Client thread/INFO]: LWJGL Version: 2.9.4
-[23:26:39] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Somnia
-[23:26:40] [Client thread/INFO]: Created: 16x16 textures/blocks-atlas
-[23:26:40] [Client thread/INFO]: Created: 16x16 textures/items-atlas
-[23:26:40] [Sound Library Loader/INFO]: Sound engine started
-[23:26:40] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Somnia
-[23:26:40] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
-[23:26:40] [Client thread/INFO]: Created: 256x256 textures/items-atlas
-[23:26:41] [Sound Library Loader/INFO]: Sound engine started
-[23:26:43] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
-[23:26:43] [Server thread/INFO]: Generating keypair
-[23:26:43] [Server thread/INFO]: Preparing start region for level 0
-[23:26:44] [Server thread/INFO]: Changing view distance to 12, from 10
-[23:26:44] [Server thread/INFO]: Developer[local:E:6ed04669] logged in with entity id 320 at (-32.5, 76.0, 250.5)
-[23:26:44] [Server thread/INFO]: Developer joined the game
-[23:26:44] [Server thread/INFO]: Saving and pausing game...
-[23:26:44] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[23:26:44] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[23:26:44] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[23:26:50] [Server thread/INFO]: Saving and pausing game...
-[23:26:50] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[23:26:50] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[23:26:50] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[23:26:50] [Server thread/INFO]: Stopping server
-[23:26:50] [Server thread/INFO]: Saving players
-[23:26:50] [Server thread/INFO]: Saving worlds
-[23:26:50] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[23:26:50] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[23:26:50] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[23:26:50] [Server thread/ERROR]: Exception stopping the server
-java.lang.UnsupportedOperationException
-	at java.util.concurrent.CopyOnWriteArrayList$COWIterator.remove(CopyOnWriteArrayList.java:1182) ~[?:1.8.0_432]
-	at com.kingrunes.somnia.common.CommonProxy.worldUnloadHook(CommonProxy.java:133) ~[CommonProxy.class:?]
-	at cpw.mods.fml.common.eventhandler.ASMEventHandler_9_CommonProxy_worldUnloadHook_Unload.invoke(.dynamic) ~[?:?]
-	at cpw.mods.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:54) ~[ASMEventHandler.class:?]
-	at cpw.mods.fml.common.eventhandler.EventBus.post(EventBus.java:140) ~[EventBus.class:?]
-	at net.minecraft.server.MinecraftServer.stopServer(MinecraftServer.java:410) ~[MinecraftServer.class:?]
-	at net.minecraft.server.integrated.IntegratedServer.stopServer(IntegratedServer.java:266) ~[IntegratedServer.class:?]
-	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:538) [MinecraftServer.class:?]
-	at net.minecraft.server.MinecraftServer$2.run(MinecraftServer.java:752) [MinecraftServer$2.class:?]
-[23:26:51] [Client thread/INFO]: Stopping!
+[08:37:14] [main/INFO]: Setting user: Developer
+[08:37:15] [Client thread/INFO]: LWJGL Version: 2.9.4
+[08:37:22] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Somnia
+[08:37:22] [Sound Library Loader/INFO]: Sound engine started
+[08:37:23] [Client thread/INFO]: Created: 16x16 textures/blocks-atlas
+[08:37:23] [Client thread/INFO]: Created: 16x16 textures/items-atlas
+[08:37:23] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Somnia
+[08:37:23] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[08:37:23] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[08:37:24] [Sound Library Loader/INFO]: Sound engine started
+[08:37:27] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
+[08:37:27] [Server thread/INFO]: Generating keypair
+[08:37:28] [Server thread/INFO]: Preparing start region for level 0
+[08:37:29] [Server thread/INFO]: Preparing spawn area: 8%
+[08:37:30] [Server thread/INFO]: Preparing spawn area: 26%
+[08:37:31] [Server thread/INFO]: Preparing spawn area: 40%
+[08:37:32] [Server thread/INFO]: Preparing spawn area: 60%
+[08:37:33] [Server thread/INFO]: Preparing spawn area: 82%
+[08:37:33] [Server thread/INFO]: Changing view distance to 12, from 10
+[08:37:34] [Server thread/INFO]: Developer[local:E:7896919f] logged in with entity id 303 at (-192.70956968652726, 70.0, -332.8963963854671)
+[08:37:34] [Server thread/INFO]: Developer joined the game
+[08:37:42] [Server thread/INFO]: Developer was slain by Zombie
+[08:37:43] [Client thread/INFO]: [CHAT] Developer was slain by Zombie
+[08:37:45] [Client thread/INFO]: [CHAT] Your home bed was missing or obstructed
+[08:37:46] [Server thread/INFO]: Saving and pausing game...
+[08:37:46] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[08:37:47] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[08:37:47] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[08:37:48] [Server thread/INFO]: Stopping server
+[08:37:48] [Server thread/INFO]: Saving players
+[08:37:48] [Server thread/INFO]: Saving worlds
+[08:37:48] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[08:37:48] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[08:37:48] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[08:37:55] [Client thread/INFO]: Deleting level New World
+[08:37:55] [Client thread/INFO]: Attempt 1...
+[08:38:03] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
+[08:38:03] [Server thread/INFO]: Generating keypair
+[08:38:03] [Server thread/INFO]: Converting map!
+[08:38:03] [Server thread/INFO]: Scanning folders...
+[08:38:03] [Server thread/INFO]: Total conversion count is 0
+[08:38:03] [Server thread/INFO]: Preparing start region for level 0
+[08:38:04] [Server thread/INFO]: Preparing spawn area: 24%
+[08:38:05] [Server thread/INFO]: Preparing spawn area: 52%
+[08:38:06] [Server thread/INFO]: Preparing spawn area: 72%
+[08:38:07] [Server thread/INFO]: Preparing spawn area: 95%
+[08:38:08] [Server thread/INFO]: Changing view distance to 12, from 10
+[08:38:08] [Server thread/INFO]: Developer[local:E:93b9f536] logged in with entity id 3805 at (155.5, 68.0, 208.5)
+[08:38:08] [Server thread/INFO]: Developer joined the game
+[08:38:14] [Server thread/INFO]: Saving and pausing game...
+[08:38:14] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[08:38:15] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[08:38:15] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[08:38:15] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 2537ms behind, skipping 50 tick(s)
+[08:38:48] [Client thread/INFO]: Warning: Clientside chunk ticking took 372 ms
+[08:38:48] [Client thread/INFO]: Warning: Clientside chunk ticking took 258 ms
+[08:38:53] [Server thread/INFO]: [Developer: Set own game mode to Creative Mode]
+[08:38:53] [Client thread/INFO]: [CHAT] Your game mode has been updated
+[08:39:47] [Client thread/INFO]: Warning: Clientside chunk ticking took 104 ms
+[08:40:07] [Client thread/INFO]: Warning: Clientside chunk ticking took 102 ms
+[08:40:07] [Client thread/INFO]: Warning: Clientside chunk ticking took 105 ms
+[08:40:33] [Client thread/INFO]: Warning: Clientside chunk ticking took 150 ms
+[08:40:35] [Client thread/INFO]: Warning: Clientside chunk ticking took 132 ms
+[08:42:13] [Server thread/INFO]: Saving and pausing game...
+[08:42:13] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[08:42:13] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[08:42:13] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[08:42:13] [Server thread/INFO]: Stopping server
+[08:42:13] [Server thread/INFO]: Saving players
+[08:42:13] [Server thread/INFO]: Saving worlds
+[08:42:13] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[08:42:13] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[08:42:13] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[08:42:17] [Client thread/INFO]: Deleting level New World
+[08:42:17] [Client thread/INFO]: Attempt 1...
+[08:42:26] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
+[08:42:26] [Server thread/INFO]: Generating keypair
+[08:42:26] [Server thread/INFO]: Converting map!
+[08:42:26] [Server thread/INFO]: Scanning folders...
+[08:42:26] [Server thread/INFO]: Total conversion count is 0
+[08:42:27] [Server thread/INFO]: Preparing start region for level 0
+[08:42:27] [Server thread/INFO]: Changing view distance to 12, from 10
+[08:42:27] [Server thread/INFO]: Developer[local:E:7f924492] logged in with entity id 112051 at (1614.5, 4.0, 340.5)
+[08:42:27] [Server thread/INFO]: Developer joined the game
+[08:42:33] [Server thread/INFO]: [Developer: Set own game mode to Creative Mode]
+[08:42:33] [Client thread/INFO]: [CHAT] Your game mode has been updated
+[08:44:09] [Server thread/INFO]: Developer has just earned the achievement [Taking Inventory]
+[08:44:09] [Client thread/INFO]: [CHAT] Developer has just earned the achievement [Taking Inventory]
+[08:44:21] [Server thread/INFO]: Saving and pausing game...
+[08:44:21] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[08:44:21] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[08:44:21] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[08:44:28] [Server thread/INFO]: [Developer: Set own game mode to Survival Mode]
+[08:44:28] [Client thread/INFO]: [CHAT] Your game mode has been updated
+[09:05:28] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 2790ms behind, skipping 55 tick(s)
+[09:09:59] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 2108ms behind, skipping 42 tick(s)
+[09:10:40] [Client thread/INFO]: Warning: Clientside chunk ticking took 176 ms
+[09:11:48] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 2433ms behind, skipping 48 tick(s)
+[09:12:29] [Server thread/INFO]: Saving and pausing game...
+[09:12:29] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[09:12:29] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[09:12:29] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[09:12:34] [Server thread/INFO]: Stopping server
+[09:12:34] [Server thread/INFO]: Saving players
+[09:12:34] [Server thread/INFO]: Saving worlds
+[09:12:34] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[09:12:34] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[09:12:34] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[09:12:35] [Client thread/INFO]: Stopping!
