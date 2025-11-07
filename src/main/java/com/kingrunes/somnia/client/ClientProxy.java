@@ -4,6 +4,7 @@ import static com.kingrunes.somnia.Somnia.proxy;
 
 import java.io.DataInputStream;
 import java.io.IOException;
+import java.util.Objects;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiScreen;
@@ -89,7 +90,7 @@ public class ClientProxy extends CommonProxy {
                 ItemStack currentItem = event.entityPlayer.inventory.getCurrentItem();
 
                 // If holding a clock, open the wake time GUI
-                if (currentItem != null && currentItem.getItem()
+                if (currentItem != null && Objects.requireNonNull(currentItem.getItem())
                     .getUnlocalizedName()
                     .equals("item.clock")) {
                     event.setCanceled(true);
