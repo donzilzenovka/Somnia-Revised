@@ -1,5 +1,7 @@
 package com.kingrunes.somnia.client;
 
+import static com.kingrunes.somnia.Somnia.proxy;
+
 import java.io.DataInputStream;
 import java.io.IOException;
 
@@ -20,8 +22,6 @@ import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-
-import static com.kingrunes.somnia.Somnia.proxy;
 
 @SideOnly(Side.CLIENT)
 public class ClientProxy extends CommonProxy {
@@ -95,8 +95,8 @@ public class ClientProxy extends CommonProxy {
                     event.setCanceled(true);
                     Minecraft.getMinecraft()
                         .displayGuiScreen(new GuiSelectWakeTime());
-                } else if(proxy.playersWakeNaturally){
-                    // Otherwise, set a default wake time based on time of day
+                } else if (proxy.playersWakeNaturally) {
+                    // Otherwise, set a default wake time based on time of day if enabled
                     long totalWorldTime = event.world.getTotalWorldTime();
                     Somnia.clientAutoWakeTime = Somnia
                         .calculateWakeTime(totalWorldTime, (totalWorldTime % 24000L > 12000L) ? 0 : 12000);
