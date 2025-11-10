@@ -140,29 +140,25 @@ public class CommonProxy {
     @SubscribeEvent
     public void worldLoadHook(WorldEvent.Load event) {
         if (event.world instanceof WorldServer worldServer) {
-            Somnia.instance.tickHandlers.add(new ServerTickHandler(worldServer));
-            System.out.println("[Somnia] Registering tick handler for loading world!");
+            if (!Somnia.instance.tickHandlers.containsKey(worldServer)) {
+                Somnia.instance.tickHandlers.put(worldServer, new ServerTickHandler(worldServer));
+                System.out.println("[Somnia] Registered tick handler for world: " + worldServer.provider.dimensionId);
+            }
         }
     }
 
     @SubscribeEvent
     public void worldUnloadHook(WorldEvent.Unload event) {
-        if (event.world instanceof WorldServer) {
-            WorldServer worldServer = (WorldServer) event.world;
-
-            boolean removed = Somnia.instance.tickHandlers.removeIf(handler -> {
-                if (handler.worldServer == worldServer) {
-                    System.out.println("[Somnia] Removing tick handler for unloading world!");
-                    return true; // remove this handler
-                }
-                return false; // keep
-            });
-
-            if (!removed) {
-                System.out.println("[Somnia] No tick handler found to remove for this world.");
+        if (event.world instanceof WorldServer worldServer) {
+            ServerTickHandler removed = Somnia.instance.tickHandlers.remove(worldServer);
+            if (removed != null) {
+                System.out.println("[Somnia] Removed tick handler for unloading world: " + worldServer.provider.dimensionId);
+            } else {
+                System.out.println("[Somnia] No tick handler found to remove for world: " + worldServer.provider.dimensionId);
             }
         }
     }
+
 
     // ----------------------------------------
     // PLAYER EVENT HOOKS

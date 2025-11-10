@@ -1,7 +1,9 @@
 package com.kingrunes.somnia;
 
 import java.lang.ref.WeakReference;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 import net.minecraft.client.Minecraft;
@@ -45,7 +47,9 @@ public class Somnia {
     public static long clientAutoWakeTime = -1L;
 
     // Use thread-safe lists to avoid concurrent modification during ticks
-    public List<ServerTickHandler> tickHandlers = new CopyOnWriteArrayList<ServerTickHandler>();
+    // Replace whatever tickHandlers list you had
+    public final Map<WorldServer, ServerTickHandler> tickHandlers = new HashMap<>();
+
     public List<WeakReference<EntityPlayerMP>> ignoreList = new CopyOnWriteArrayList<WeakReference<EntityPlayerMP>>();
 
     public static final String MOD_ID = "Somnia";
@@ -93,11 +97,12 @@ public class Somnia {
      * Called each server tick (from wherever you hook it)
      */
     public void tick() {
-        // synchronize on the local list reference or rely on CopyOnWriteArrayList
-        for (ServerTickHandler serverTickHandler : tickHandlers) {
+        // iterate over all tick handlers safely
+        for (ServerTickHandler serverTickHandler : tickHandlers.values()) {
             serverTickHandler.tickStart();
         }
     }
+
 
     public static String timeStringForWorldTime(long time) {
         time += 6000L;
@@ -161,7 +166,7 @@ public class Somnia {
             return false;
         }
 
-        for (ServerTickHandler serverTickHandler : instance.tickHandlers) {
+        for (ServerTickHandler serverTickHandler : instance.tickHandlers.values()) {
             if (serverTickHandler.worldServer == par1WorldServer) {
                 // If the Somnia state is ACTIVE, we want to prevent spawning (return false).
                 // Original code returned (serverTickHandler.currentState != SomniaState.ACTIVE)
@@ -169,6 +174,7 @@ public class Somnia {
                 return (serverTickHandler.currentState != SomniaState.ACTIVE);
             }
         }
+
 
         // No tick handler matched this world — log and allow spawning by default.
         System.err.println("[Somnia] Warning: no ServerTickHandler found for world " + par1WorldServer);
